@@ -1,0 +1,136 @@
+/* Reset CSS básico */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", serif;
+  background-color: #111;
+  color: #fff;
+  line-height: 1.6;
+  font-size: 16px; /* Tamanho da fonte para o corpo */
+}
+
+h1,
+h2,
+h3 {
+  color: #fff;
+}
+
+h1 {
+  font-size: 2.5rem; /* Tamanho da fonte para o h1 */
+}
+
+h2 {
+  font-size: 2rem; /* Tamanho da fonte para o h2 */
+}
+
+h3 {
+  font-size: 1.5rem; /* Tamanho da fonte para o h3 */
+}
+
+/* Botões */
+.button {
+  background-color: #d62828;
+  color: #fff;
+  padding: 18px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  font-size: 1rem; /* Tamanho da fonte para os botões */
+}
+
+.button:hover {
+  background-color: #e63946;
+}
+
+/* Contêiner */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Flexbox */
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Título da seção */
+.section-title {
+  font-size: 1.8rem; /* Tamanho da fonte para o título da seção */
+  margin-bottom: 20px;
+}
+
+/* Media Queries para responsividade */
+
+/* Para telas pequenas (até 768px) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Ajusta o tamanho da fonte para telas pequenas */
+  }
+
+  h1 {
+    font-size: 2rem; /* Ajusta o tamanho do h1 para telas pequenas */
+  }
+
+  h2 {
+    font-size: 1.7rem; /* Ajusta o tamanho do h2 para telas pequenas */
+  }
+
+  h3 {
+    font-size: 1.3rem; /* Ajusta o tamanho do h3 para telas pequenas */
+  }
+
+  .section-title {
+    font-size: 1.5rem; /* Ajusta o tamanho do título da seção */
+  }
+
+  .button {
+    font-size: 0.9rem; /* Ajusta o tamanho da fonte do botão */
+    padding: 8px 12px; /* Ajusta o padding do botão */
+  }
+
+  .container {
+    padding: 0 10px; /* Ajusta o padding do contêiner */
+  }
+}
+
+/* Para telas muito pequenas (até 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px; /* Ajusta o tamanho da fonte para telas muito pequenas */
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Ajusta o tamanho do h1 para telas muito pequenas */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Ajusta o tamanho do h2 para telas muito pequenas */
+  }
+
+  h3 {
+    font-size: 1.2rem; /* Ajusta o tamanho do h3 para telas muito pequenas */
+  }
+
+  .section-title {
+    font-size: 1.2rem; /* Ajusta o tamanho do título da seção */
+  }
+
+  .button {
+    font-size: 0.8rem; /* Ajusta o tamanho da fonte do botão */
+    padding: 6px 10px; /* Ajusta o padding do botão */
+  }
+
+  .container {
+    padding: 0 5px; /* Ajusta o padding do contêiner */
+  }
+}
