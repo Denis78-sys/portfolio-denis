@@ -38,10 +38,12 @@ export default {
   margin: 0;
 }
 p {
-  font-size: medium;
+  font-size: small;
   color: #9ca3af;
 }
-
+h1{
+    font-size: 1.5em;
+}
 .hamburger {
   display: none;
   background: none;
@@ -60,11 +62,23 @@ p {
   .hamburger {
     display: block;
   }
+  p{
+
+font-size: smaller;}
+  h1{
+    font-size: 1.25em;
+  }
 }
 
 @media (max-width: 480px) {
   .hamburger {
     display: block;
+  }
+  p{
+    font-size: smaller;
+  }
+  h1{
+    font-size: 1.2em;
   }
 }
 </style>
