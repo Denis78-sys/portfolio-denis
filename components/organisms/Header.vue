@@ -23,7 +23,6 @@ export default {
 </script>
 
 <style scoped>
-/* Estilos Gerais */
 .header {
   display: flex;
   justify-content: space-between;
@@ -32,25 +31,19 @@ export default {
   color: white;
   padding: 16px;
 }
-
 .dados-title {
   display: block;
 }
-
 .title {
   margin: 0;
-  font-size: clamp(1.5rem, 2.5vw, 2rem); /* Tamanho responsivo do título */
 }
-
 p {
-  font-size: clamp(
-    0.9rem,
-    2vw,
-    1rem
-  ); /* Tamanho responsivo do texto secundário */
+  font-size: small;
   color: #9ca3af;
 }
-
+h1{
+    font-size: 1.5em;
+}
 .hamburger {
   display: none;
   background: none;
@@ -67,11 +60,25 @@ p {
 /* Responsividade */
 @media (max-width: 768px) {
   .hamburger {
-    display: block; /* Mostra o botão hamburger em telas menores */
+    display: block;
+  }
+  p{
+
+font-size: small;}
+  h1{
+    font-size: 1.9em;
   }
 }
 
 @media (max-width: 480px) {
-  /* Estilo adicional caso necessário para telas muito pequenas */
+  .hamburger {
+    display: block;
+  }
+  p{
+    font-size: small;
+  }
+  h1{
+    font-size: 1.9em;
+  }
 }
 </style>
