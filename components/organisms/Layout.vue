@@ -64,7 +64,7 @@ main {
   gap: 20px;
   background-color: #252627;
   height: 100%;
-  padding: 20px;
+  padding: 8%;
 }
 
 .main-apresentacao {
@@ -101,7 +101,7 @@ p {
   main {
     grid-template-columns: 1fr;
     text-align: center;
-    padding: 15px; /* Reduzido ainda mais o espaçamento interno */
+    /* padding: 8%; */ /* Reduzido ainda mais o espaçamento interno */
     gap: 20px; /* Reduzido o espaço entre os elementos */
   }
 
@@ -132,7 +132,7 @@ p {
   main {
     grid-template-columns: 1fr;
     text-align: center;
-    padding: 15px; /* Reduzido ainda mais o espaçamento interno */
+   /*  padding: 15px; */ /* Reduzido ainda mais o espaçamento interno */
     gap: 20px; /* Reduzido o espaço entre os elementos */
   }
 
