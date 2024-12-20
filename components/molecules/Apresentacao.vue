@@ -1,7 +1,7 @@
 <template>
   <div class="apresentacao">
     <div class="greeting"><span class="wave">👋</span> Olá, eu sou</div>
-    <h1>Denis Marques</h1>
+    <h1 class="nome">Denis Marques</h1>
     <p class="dev">Desenvolvedor Front-end</p>
   </div>
 </template>
@@ -15,22 +15,33 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  font-size: 3.75em;
+.apresentacao {
+  display: block;
+  gap: 12px;
 }
-.greeting {
-  font-size: 1.3rem;
+
+.nome {
+  font-size: clamp(2.5rem, 5vw, 3.75rem); /* Título principal responsivo */
   /* text-align: center; */
-  color: #9ca3af;
 }
+
+.greeting {
+  font-size: clamp(1rem, 2.5vw, 1.3rem); /* Saudação responsiva */
+  color: #9ca3af;
+  /* text-align: center; */
+}
+
 .wave {
   animation: wave 1s infinite;
   display: inline-block;
 }
+
 .dev {
-  font-size: 1.87rem;
+  font-size: clamp(1rem, 3vw, 1.87rem); /* Texto de descrição responsivo */
   color: #d61c1c;
+  /* text-align: center; */
 }
+
 @keyframes wave {
   0% {
     transform: rotate(0deg);
@@ -43,35 +54,35 @@ h1 {
   }
 }
 
-/* Responsividade */
+/* Ajuste para telas menores */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 1.50em;
-    text-align: center;
+  .apresentacao {
+    gap: 9px;
   }
   .greeting {
-    font-size: 1rem;
     text-align: center;
-    color: #9ca3af;
   }
-  .dev {
-    font-size: 0.8rem;
+  .nome{
+    text-align: center;
+  }
+  .dev{
     text-align: center;
   }
 }
 
 @media (max-width: 480px) {
-  h1 {
-    font-size: 1.50em;
-    text-align: center;
+  .apresentacao {
+    gap: 8px;
   }
   .greeting {
-    font-size: 1rem;
     text-align: center;
   }
-  .dev {
-    font-size: 0.8rem;
+  .nome{
+    text-align: center;
+  }
+  .dev{
     text-align: center;
   }
 }
 </style>
+

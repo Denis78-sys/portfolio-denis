@@ -4,15 +4,18 @@
       <Header title="Denis Marques" @toggleMenu="toggleMenu" />
       <SideMenu :isOpen="menuOpen" :links="links" />
     </div>
-    <main>
-      <Apresentacao />
-      <!-- <div class="especializacao">
-        <p>
-          Especializado em criar experiências digitais excepcionais com foco em
-          design moderno e performance.
-        </p>
-      </div> -->
-      <BotoesInicio />
+    <main class="container">
+      <div class="main-apresentacao">
+        <Apresentacao />
+        <!-- <div class="especializacao">
+              <p>
+                Especializado em criar experiências digitais excepcionais com foco em
+                design moderno e performance.
+              </p>
+            </div> -->
+        <BotoesInicio />
+      </div>
+      <ImagemDev />
       <slot />
     </main>
   </div>
@@ -40,18 +43,12 @@ export default {
 </script>
 
 <style scoped>
-main {
-  padding: 16px;
-
-  background-color: #252627;
+.layout {
+  display: flex;
+  /* height: 100vh; */ /* Preenche a altura total da janela */
 }
 
 /* Define o layout principal */
-.layout {
-  display: flex;
-  height: 100vh; /* Preenche a altura total da janela */
-}
-
 /* Estilo do menu lateral */
 .SideMenu {
   width: 250px; /* Largura fixa para o menu */
@@ -61,10 +58,25 @@ main {
 
 /* Estilo do conteúdo principal */
 main {
-  flex: 1; /* Ocupa todo o espaço restante */
-  padding: 16px; /* Espaçamento interno */
-  overflow-y: auto; /* Permite rolagem caso o conteúdo exceda a altura */
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+  gap: 20px;
+  background-color: #252627;
+  height: 100%;
+  padding: 20px;
 }
+
+.main-apresentacao {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.imagem-dev {
+  order: 0; /* Ordem padrão */
+}
+
 .especializacao {
   display: flex;
   width: 40%;
@@ -86,6 +98,23 @@ p {
     width: 40%;
     justify-content: center;
   }
+  main {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 15px; /* Reduzido ainda mais o espaçamento interno */
+    gap: 20px; /* Reduzido o espaço entre os elementos */
+  }
+
+  .main-apresentacao {
+    align-items: center;
+    gap: 8px; /* Menor espaço entre os itens */
+  }
+
+  .imagem-dev {
+    order: -1; /* Move a imagem para o início */
+  }
+
+  
 }
 
 @media (max-width: 480px) {
@@ -100,5 +129,22 @@ p {
     width: 40%;
     justify-content: center;
   }
+  main {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 15px; /* Reduzido ainda mais o espaçamento interno */
+    gap: 20px; /* Reduzido o espaço entre os elementos */
+  }
+
+  .main-apresentacao {
+    align-items: center;
+    gap: 8px; /* Menor espaço entre os itens */
+  }
+
+  .imagem-dev {
+    order: -1; /* Move a imagem para o início */
+  }
+
+  
 }
 </style>

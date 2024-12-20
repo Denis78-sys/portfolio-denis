@@ -26,12 +26,14 @@ export default {
 
 <style scoped>
 .side-menu {
+ 
   left: -250px;
   width: 250px;
   height: 100%;
   background: #121212;
   color: white;
   overflow-y: auto;
+  z-index: 10;
 }
 
 ul {
@@ -49,6 +51,7 @@ ul {
   text-decoration: none;
   display: flex;
   align-items: center;
+  font-size: 1rem; /* Tamanho base da fonte para telas grandes */
 }
 
 .menu-item a i {
@@ -75,8 +78,12 @@ ul {
   }
 
   /* Ajuste a distância entre os itens de menu */
-  .menu-item {
-    padding: 12px; /* Reduzindo o padding para telas menores */
+  .menu-item a {
+    font-size: 0.9rem; /* Reduz um pouco o tamanho da fonte */
+  }
+
+  .menu-item a i {
+    margin-right: 6px; /* Ajusta o espaçamento para ícones */
   }
 }
 
@@ -99,8 +106,12 @@ ul {
   }
 
   /* Ajuste maior na distância entre os itens de menu */
-  .menu-item {
-    padding: 10px; /* Ajuste o padding para telas ainda menores */
+  .menu-item a {
+    font-size: 0.8rem; /* Fonte menor para telas pequenas */
+  }
+
+  .menu-item a i {
+    margin-right: 5px; /* Espaçamento ainda menor para ícones */
   }
 }
 
