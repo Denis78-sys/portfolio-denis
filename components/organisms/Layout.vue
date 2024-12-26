@@ -4,20 +4,21 @@
       <Header title="Denis Marques" @toggleMenu="toggleMenu" />
       <SideMenu :isOpen="menuOpen" :links="links" />
     </div>
-    <main class="container">
-      
-      <div class="main-apresentacao">
-        <Apresentacao />
-        <!-- <div class="especializacao">
-          <p>
-            Especializado em criar experiências digitais excepcionais com foco em
-            design moderno e performance.
-          </p>
-        </div> -->
-        <BotoesInicio />
-      </div>
-      <ImagemDev />
-      <slot />
+    <main>
+      <Container class="cont">
+        <div class="main-apresentacao">
+          <Apresentacao />
+          <!-- <div class="especializacao">
+            <p>
+              Especializado em criar experiências digitais excepcionais com foco em
+              design moderno e performance.
+            </p>
+          </div> -->
+          <BotoesInicio />
+        </div>
+        <ImagemDev />
+        <slot />
+      </Container>
     </main>
   </div>
 </template>
@@ -58,19 +59,22 @@ export default {
 /* Estilo principal */
 main {
   width: 100%;
-  display: flex;
+  /* display: flex; */
   flex: 1; /* Ocupa o espaço restante */
   overflow-y: auto; /* Permite rolar o conteúdo do main */
+
+  gap: 20px;
+  /* padding: 20px; */
+  background-color: #252627;
+  /* padding: 4%; */
+  height: auto;
+  /*  z-index: 10; */
+}
+.cont {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  padding: 20px;
-  background-color: #252627;
-  padding: 4%;
-  height: auto;
- /*  z-index: 10; */
 }
-
 .main-apresentacao {
   display: flex;
   flex-direction: column;
@@ -84,7 +88,6 @@ main {
   width: 300px;
   height: auto;
   border-radius: 50%;
-  
 }
 
 .especializacao {
@@ -103,13 +106,13 @@ p {
 
 @media (max-width: 1440px) {
   /* Telas grandes (até 1440px) */
-  main {
+  .cont {
     gap: 16px;
   }
   .main-apresentacao {
     gap: 16px;
   }
-  .imagem-dev{
+  .imagem-dev {
     margin-top: 80px;
     /* order: -1; */
   }
@@ -127,20 +130,18 @@ p {
     left: 0; */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   }
-
-
-  main {
+  .cont {
     flex-direction: column;
-   /*  margin-left: 250px; */ /* Espaço para o menu fixo */
-   /*  gap: 12px; */
   }
+
+
   .main-apresentacao {
     align-items: center;
     /* gap: 12px; */
     margin-top: 70px;
     margin-bottom: 70px;
   }
-  .imagem-dev{
+  .imagem-dev {
     margin-top: 80px;
     order: -1;
   }
@@ -150,10 +151,8 @@ p {
   .layout {
     display: block;
   }
-  .hed{
-    display: flex;
-  }
-  main {
+  
+  .cont {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -181,7 +180,6 @@ p {
 
 /* Tela pequena */
 @media (max-width: 480px) {
-  
   .layout {
     display: block;
   }
@@ -214,7 +212,7 @@ p {
     width: 70%;
     justify-content: center;
   }
-  main {
+  .cont {
     grid-template-columns: 1fr;
     text-align: center;
     gap: 6px;
