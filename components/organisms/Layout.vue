@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <div>
-      <Header class="hed" title="Denis Marques" @toggleMenu="toggleMenu" />
+      <Header title="Denis Marques" @toggleMenu="toggleMenu" />
       <SideMenu :isOpen="menuOpen" :links="links" />
     </div>
     <main class="container">
@@ -50,10 +50,6 @@ export default {
   overflow: hidden; /* Evita scroll no contêiner principal */
 }
 
-.hed{
-
-  display: none;
-}
 /* Menu lateral */
 .SideMenu {
   position: sticky;

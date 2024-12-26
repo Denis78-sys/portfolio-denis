@@ -1,6 +1,6 @@
 <template>
   <aside :class="{ open: isOpen }" class="side-menu">
-    <Header class="hede" title="Denis Marques" />
+    <!-- <Header class="hede" title="Denis Marques" /> -->
     <ul>
       <li v-for="(link, index) in links" :key="index" class="menu-item">
         <a :href="link.href"> <i :class="link.icon"></i> {{ link.text }} </a>
@@ -62,6 +62,9 @@ ul {
   /* .side-menu{
     position: fixed;
   } */
+  .hede{
+    display: none;
+  }
 }
 /* Responsividade */
 @media (max-width: 768px) {
@@ -81,8 +84,8 @@ ul {
     background: #121212f3;
     color: white;
     transition: transform 0.3s ease-in-out;
-    z-index: 10;
-    overflow-y: auto;
+   /*  z-index: 10; */
+    /* overflow-y: auto; */
   }
 
   .side-menu.open {
