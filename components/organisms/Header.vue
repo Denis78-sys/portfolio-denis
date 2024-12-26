@@ -30,6 +30,7 @@ export default {
   background: #121212;
   color: white;
   padding: 16px;
+  width: 250px;
 }
 .dados-title {
   display: block;
@@ -41,8 +42,8 @@ p {
   font-size: small;
   color: #9ca3af;
 }
-h1{
-    font-size: 1.5em;
+h1 {
+  font-size: 1.5em;
 }
 .hamburger {
   display: none;
@@ -59,25 +60,31 @@ h1{
 
 /* Responsividade */
 @media (max-width: 768px) {
+  .header {
+    width: 100%;
+  }
   .hamburger {
     display: block;
   }
-  p{
-
-font-size: small;}
-  h1{
+  p {
+    font-size: small;
+  }
+  h1 {
     font-size: 1.9em;
   }
 }
 
 @media (max-width: 480px) {
+  .header {
+    width: 100%;
+  }
   .hamburger {
     display: block;
   }
-  p{
+  p {
     font-size: small;
   }
-  h1{
+  h1 {
     font-size: 1.9em;
   }
 }

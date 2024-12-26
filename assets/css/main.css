@@ -48,12 +48,14 @@ h3 {
   background-color: #e63946;
 }
 
+
 /* Contêiner */
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 80px; /* Espaço lateral para telas grandes */
+  /* border: 1px solid red; */
 }
 
 /* Flexbox */
@@ -99,7 +101,7 @@ h3 {
   }
 
   .container {
-    padding: 0 10px; /* Ajusta o padding do contêiner */
+    padding: 0 22px; /* Ajusta o padding do contêiner */
   }
 }
 
@@ -131,6 +133,6 @@ h3 {
   }
 
   .container {
-    padding: 0 5px; /* Ajusta o padding do contêiner */
+    padding: 0 22px; /* Ajusta o padding do contêiner */
   }
 }

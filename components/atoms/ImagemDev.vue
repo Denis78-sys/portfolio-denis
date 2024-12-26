@@ -15,10 +15,10 @@
   <style scoped>
   .foto {
     width: 100%;
-    max-width: 384px; /* Tamanho máximo em telas maiores */
+    max-width: 284px; /* Tamanho máximo em telas maiores */
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 50%;
-    border: 2px solid #D61C1C;
+    border: 3px solid #D61C1C;
     margin: 0 auto; /* Centraliza a imagem */
   }
   

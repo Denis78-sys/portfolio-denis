@@ -53,7 +53,11 @@ export default {
     transform: rotate(0deg);
   }
 }
-
+@media (max-width: 1024px) {
+  .greeting {
+    text-align: center;
+  }
+}
 /* Ajuste para telas menores */
 @media (max-width: 768px) {
   .apresentacao {

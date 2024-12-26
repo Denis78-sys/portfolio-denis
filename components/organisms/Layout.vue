@@ -1,18 +1,19 @@
 <template>
   <div class="layout">
     <div>
-      <Header title="Denis Marques" @toggleMenu="toggleMenu" />
+      <Header class="hed" title="Denis Marques" @toggleMenu="toggleMenu" />
       <SideMenu :isOpen="menuOpen" :links="links" />
     </div>
     <main class="container">
+      
       <div class="main-apresentacao">
         <Apresentacao />
         <!-- <div class="especializacao">
-              <p>
-                Especializado em criar experiências digitais excepcionais com foco em
-                design moderno e performance.
-              </p>
-            </div> -->
+          <p>
+            Especializado em criar experiências digitais excepcionais com foco em
+            design moderno e performance.
+          </p>
+        </div> -->
         <BotoesInicio />
       </div>
       <ImagemDev />
@@ -44,107 +45,194 @@ export default {
 
 <style scoped>
 .layout {
-  display: flex;
-  /* height: 100vh; */ /* Preenche a altura total da janela */
+  display: flex; /* Coloca side-menu e main lado a lado */
+  height: 100vh; /* Ocupa toda a altura da tela */
+  overflow: hidden; /* Evita scroll no contêiner principal */
 }
 
-/* Define o layout principal */
-/* Estilo do menu lateral */
+.hed{
+
+  display: none;
+}
+/* Menu lateral */
 .SideMenu {
-  width: 250px; /* Largura fixa para o menu */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra */
-  transition: transform 0.3s ease-in-out; /* Suaviza o abrir/fechar */
+  position: sticky;
 }
 
-/* Estilo do conteúdo principal */
+/* Estilo principal */
 main {
-  display: grid;
-  grid-template-columns: 60% 40%;
+  width: 100%;
+  display: flex;
+  flex: 1; /* Ocupa o espaço restante */
+  overflow-y: auto; /* Permite rolar o conteúdo do main */
+  justify-content: space-between;
   align-items: center;
   gap: 20px;
+  padding: 20px;
   background-color: #252627;
-  height: 100%;
-  padding: 8%;
+  padding: 4%;
+  height: auto;
+ /*  z-index: 10; */
 }
 
 .main-apresentacao {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 .imagem-dev {
-  order: 0; /* Ordem padrão */
+  order: 0;
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+  
 }
 
 .especializacao {
   display: flex;
-  width: 40%;
+  justify-content: center;
+  align-items: center;
+  width: 391px;
 }
+
 p {
-  font-size: 1em;
+  font-size: 1.2rem;
   color: #d1d5db;
-  /* text-align: justify; */
-  line-height: normal;
+  /* text-align: center; */
+  line-height: 1.5;
 }
+
+@media (max-width: 1440px) {
+  /* Telas grandes (até 1440px) */
+  main {
+    gap: 16px;
+  }
+  .main-apresentacao {
+    gap: 16px;
+  }
+  .imagem-dev{
+    margin-top: 80px;
+    /* order: -1; */
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Telas médias (até 1024px) */
+  /* .layout {
+    display: block;
+  } */
+  .side-menu {
+    position: fixed;
+    height: 100vh;
+    /* top: 0;
+    left: 0; */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+
+  main {
+    flex-direction: column;
+   /*  margin-left: 250px; */ /* Espaço para o menu fixo */
+   /*  gap: 12px; */
+  }
+  .main-apresentacao {
+    align-items: center;
+    /* gap: 12px; */
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+  .imagem-dev{
+    margin-top: 80px;
+    order: -1;
+  }
+}
+/* Tela média */
 @media (max-width: 768px) {
   .layout {
     display: block;
   }
-  p {
-    font-size: 0.8em;
-  }
-  .especializacao {
-    width: 40%;
-    justify-content: center;
+  .hed{
+    display: flex;
   }
   main {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    /* padding: 8%; */ /* Reduzido ainda mais o espaçamento interno */
-    gap: 20px; /* Reduzido o espaço entre os elementos */
+    /* gap: 20px; */
+    /* padding: 2%; */
   }
 
   .main-apresentacao {
     align-items: center;
-    gap: 8px; /* Menor espaço entre os itens */
+    margin-top: 36px;
+    margin-bottom: 36px;
   }
 
   .imagem-dev {
-    order: -1; /* Move a imagem para o início */
+    margin-top: 36px;
+    order: -1;
+    width: 200px;
   }
 
-  
+  p {
+    text-align: center;
+    font-size: 1rem;
+  }
 }
 
+/* Tela pequena */
 @media (max-width: 480px) {
+  
+  .layout {
+    display: block;
+  }
+
+  main {
+    padding: 1%;
+    gap: 10px;
+  }
+
+  .imagem-dev {
+    width: 150px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 320px) {
+  /* Telas muito pequenas (até 320px) */
   .layout {
     display: block;
     font-size: 0.7em;
   }
   p {
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
   .especializacao {
-    width: 40%;
+    width: 70%;
     justify-content: center;
   }
   main {
     grid-template-columns: 1fr;
     text-align: center;
-   /*  padding: 15px; */ /* Reduzido ainda mais o espaçamento interno */
-    gap: 20px; /* Reduzido o espaço entre os elementos */
+    gap: 6px;
   }
 
   .main-apresentacao {
     align-items: center;
-    gap: 8px; /* Menor espaço entre os itens */
+    gap: 4px;
   }
 
   .imagem-dev {
     order: -1; /* Move a imagem para o início */
+    width: 100px; /* Redimensiona a imagem */
+    height: 100px;
   }
-
-  
 }
 </style>

@@ -1,5 +1,6 @@
 <template>
   <aside :class="{ open: isOpen }" class="side-menu">
+    <Header class="hede" title="Denis Marques" />
     <ul>
       <li v-for="(link, index) in links" :key="index" class="menu-item">
         <a :href="link.href"> <i :class="link.icon"></i> {{ link.text }} </a>
@@ -27,13 +28,13 @@ export default {
 <style scoped>
 .side-menu {
  
-  left: -250px;
+ /*  left: -250px; */
   width: 250px;
   height: 100%;
   background: #121212;
   color: white;
-  overflow-y: auto;
-  z-index: 10;
+  /* overflow-y: auto; */
+  /* z-index: 10; */
 }
 
 ul {
@@ -57,15 +58,26 @@ ul {
 .menu-item a i {
   margin-right: 8px;
 }
-
+@media (max-width: 1024px){
+  /* .side-menu{
+    position: fixed;
+  } */
+}
 /* Responsividade */
 @media (max-width: 768px) {
+  /* .hede{
+    display: none;
+  } */
+  .hede{
+    display: none;
+  }
   .side-menu {
-    position: fixed;
-    top: 0;
+    /* position: fixed; */
+    top: 90px;
     left: -250px;
     width: 250px;
-    height: 100%;
+    height: 100vh;
+    position: sticky;
     background: #121212f3;
     color: white;
     transition: transform 0.3s ease-in-out;
@@ -88,19 +100,14 @@ ul {
 }
 
 @media (max-width: 480px) {
-  .side-menu {
+  /* .side-menu {
     position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background: #121212f3;
-    color: white;
-    transition: transform 0.3s ease-in-out;
-    z-index: 10;
-    overflow-y: auto;
-  }
+    
+  } */
 
+  .hede{
+    display: none;
+  }
   .side-menu.open {
     transform: translateX(250px);
   }
