@@ -15,5 +15,7 @@ export default {
 </script>
 
 <style scoped>
-
+a{
+  width: 100%;
+}
 </style>

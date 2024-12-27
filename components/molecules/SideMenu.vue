@@ -84,7 +84,7 @@ ul {
     background: #121212f3;
     color: white;
     transition: transform 0.3s ease-in-out;
-   /*  z-index: 10; */
+    z-index: 10;
     /* overflow-y: auto; */
   }
 

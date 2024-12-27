@@ -15,16 +15,18 @@
   <style scoped>
   /* Estilo base para o container */
   .cont {
-    width: 100%; /* Por padrão ocupa 100% */
+    width: calc(100% - 40px); /* Reduz a largura total para deixar uma margem fixa */
     max-width: 1200px; /* Largura máxima para telas maiores */
-    margin: 0 auto; /* Centraliza horizontalmente */
-    padding: 20px; /* Espaçamento interno */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    /* padding: 20px; */ /* Espaçamento interno */
+   /*  border: 1px solid red; */ /* Apenas para visualização */
   }
   
   /* Telas grandes (1440px e maiores) */
   @media (min-width: 1440px) {
     .cont {
       max-width: 1400px; /* Aumenta a largura máxima */
+      width: calc(100% - 60px); /* Ajusta a margem para telas maiores */
     }
   }
   
@@ -32,6 +34,7 @@
   @media (max-width: 1439px) and (min-width: 1024px) {
     .cont {
       max-width: 1024px; /* Ajusta largura para telas médias */
+      width: calc(100% - 40px); /* Mantém uma margem menor */
     }
   }
   
@@ -39,15 +42,17 @@
   @media (max-width: 1023px) and (min-width: 768px) {
     .cont {
       max-width: 768px; /* Ajusta largura para tablets */
-      padding: 15px; /* Reduz o espaçamento interno */
+      width: calc(100% - 30px); /* Reduz a margem */
+      /* padding: 15px; */ /* Ajusta o espaçamento interno */
     }
   }
   
   /* Telas muito pequenas (até 767px) */
   @media (max-width: 767px) {
     .cont {
-      max-width: 100%; /* Ocupa toda a largura */
-      padding: 10px; /* Reduz o espaçamento interno */
+      max-width: 100%; /* Ocupa toda a largura disponível */
+      width: calc(100% - 20px); /* Mantém uma margem fixa pequena */
+      /* padding: 10px; */ /* Reduz o espaçamento interno */
     }
   }
   </style>

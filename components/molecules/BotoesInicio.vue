@@ -18,6 +18,7 @@ export default {
 <style scoped>
 .botoes {
   display: flex;
+  width: 100%;
   gap: 16px;
 }
 @media (max-width: 768px) {

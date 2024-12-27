@@ -19,6 +19,8 @@
         <ImagemDev />
         <slot />
       </Container>
+
+      <Sobre />
     </main>
   </div>
 </template>
@@ -63,11 +65,11 @@ main {
   flex: 1; /* Ocupa o espaço restante */
   overflow-y: auto; /* Permite rolar o conteúdo do main */
 
-  gap: 20px;
+  /*  gap: 20px; */
   /* padding: 20px; */
   background-color: #252627;
   /* padding: 4%; */
-  height: auto;
+  /*  height: auto; */
   /*  z-index: 10; */
 }
 .cont {
@@ -134,7 +136,6 @@ p {
     flex-direction: column;
   }
 
-
   .main-apresentacao {
     align-items: center;
     /* gap: 12px; */
@@ -151,7 +152,9 @@ p {
   .layout {
     display: block;
   }
-  
+  main {
+    overflow-y: auto;
+  }
   .cont {
     display: flex;
     flex-direction: column;
@@ -187,12 +190,15 @@ p {
   main {
     padding: 1%;
     gap: 10px;
+    overflow-y: auto;
   }
 
   .imagem-dev {
     width: 150px;
   }
-
+  main {
+    overflow-y: auto;
+  }
   p {
     text-align: center;
     font-size: 0.9rem;

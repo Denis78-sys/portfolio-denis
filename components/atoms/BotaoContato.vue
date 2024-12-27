@@ -18,6 +18,7 @@ export default {
 /* Botões */
 .contato {
   color: #fff;
+  width: 100%;
   padding: 17px 18px;
   border-radius: 5px;
   border: 2px solid #4a4a4a;
