@@ -48,9 +48,10 @@ export default {
 
 <style scoped>
 .layout {
-  display: flex; /* Coloca side-menu e main lado a lado */
-  height: 100vh; /* Ocupa toda a altura da tela */
-  overflow: hidden; /* Evita scroll no contêiner principal */
+  display: flex; /* Organiza menu e main lado a lado */
+ /*  flex-direction: column;  *//* Para telas menores, organiza elementos verticalmente */
+  height: 100vh; /* Garante altura total da tela */
+  overflow: hidden; /* Controla o scroll no layout principal */
 }
 
 /* Menu lateral */
@@ -60,17 +61,10 @@ export default {
 
 /* Estilo principal */
 main {
-  width: 100%;
-  /* display: flex; */
-  flex: 1; /* Ocupa o espaço restante */
-  overflow-y: auto; /* Permite rolar o conteúdo do main */
-
-  /*  gap: 20px; */
-  /* padding: 20px; */
+  flex: 1; /* Garante que main ocupa o espaço restante */
+  overflow-y: auto; /* Permite scroll vertical */
+  /* padding: 16px; */ /* Adiciona espaçamento interno */
   background-color: #252627;
-  /* padding: 4%; */
-  /*  height: auto; */
-  /*  z-index: 10; */
 }
 .cont {
   display: flex;
@@ -108,6 +102,7 @@ p {
 
 @media (max-width: 1440px) {
   /* Telas grandes (até 1440px) */
+
   .cont {
     gap: 16px;
   }
@@ -150,10 +145,14 @@ p {
 /* Tela média */
 @media (max-width: 768px) {
   .layout {
-    display: block;
+    display: flex;
+    flex-direction: column; /* Empilha elementos verticalmente */
+    height: 100vh; /* Garante altura total em telas menores */
   }
+
   main {
-    overflow-y: auto;
+    overflow-y: auto; /* Permite scroll no conteúdo principal */
+    flex: 1; /* Garante que o main ocupa o espaço restante */
   }
   .cont {
     display: flex;
@@ -184,13 +183,13 @@ p {
 /* Tela pequena */
 @media (max-width: 480px) {
   .layout {
-    display: block;
+    height: 100vh; /* Mantém a altura total */
+    overflow: hidden; /* Evita scroll no contêiner principal */
   }
 
   main {
-    padding: 1%;
-    gap: 10px;
-    overflow-y: auto;
+    overflow-y: auto; /* Habilita o scroll vertical */
+    flex: 1; /* Ajusta o comportamento de espaço */
   }
 
   .imagem-dev {

@@ -12,6 +12,16 @@
         default: () => {},
       },
     },
+    methods: {
+    onClick() {
+      // Aqui, você pode adicionar o link para o arquivo PDF
+      const curriculoUrl = '/Profile Denis Marques.pdf'; // Caminho do arquivo PDF na pasta 'static'
+      const link = document.createElement('a');
+      link.href = curriculoUrl;
+      link.download = 'Profile Denis Marques.pdf'; // Nome do arquivo ao fazer o download
+      link.click();
+    },
+  },
   };
   </script>
   
