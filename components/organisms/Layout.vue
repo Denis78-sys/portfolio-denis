@@ -21,6 +21,7 @@
       </Container>
 
       <Sobre />
+      <ProjectList />
     </main>
   </div>
 </template>

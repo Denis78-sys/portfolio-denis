@@ -6,19 +6,23 @@
   
   <script>
   export default {
-    props: {
+    /* props: {
       onClick: {
         type: Function,
         default: () => {},
       },
-    },
+    }, */
     methods: {
     onClick() {
       // Aqui, você pode adicionar o link para o arquivo PDF
       const curriculoUrl = '/Profile Denis Marques.pdf'; // Caminho do arquivo PDF na pasta 'static'
+      // Cria um novo elemento <a> (link) dinamicamente
       const link = document.createElement('a');
+       // Define o caminho para o arquivo PDF no atributo href do link
       link.href = curriculoUrl;
+       // Define o nome do arquivo que será baixado quando o link for clicado
       link.download = 'Profile Denis Marques.pdf'; // Nome do arquivo ao fazer o download
+       // Simula o clique no link para iniciar o download
       link.click();
     },
   },
