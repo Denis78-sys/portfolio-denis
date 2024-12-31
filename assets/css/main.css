@@ -34,7 +34,7 @@ h3 {
 
 /* Botões */
 .button {
-  background-color: #d62828;
+  background-color: #e63946;
   color: #fff;
   padding: 18px 18px;
   border-radius: 5px;
@@ -45,7 +45,7 @@ h3 {
 }
 
 .button:hover {
-  background-color: #e63946;
+  background-color: #d62828;
 }
 
 

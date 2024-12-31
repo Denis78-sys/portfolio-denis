@@ -22,6 +22,7 @@
 
       <Sobre />
       <ProjectList />
+      <SkillsSection />
     </main>
   </div>
 </template>

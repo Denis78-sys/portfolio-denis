@@ -37,7 +37,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #d62828;
+      background-color: #e63946;
       color: white;
       padding: 12px 16px;
       border-radius: 8px;
@@ -49,7 +49,7 @@
       transition: background-color 0.3s ease;
   
       &:hover {
-        background-color: #e63946;
+        background-color: #d62828;
       }
   
       .icon {

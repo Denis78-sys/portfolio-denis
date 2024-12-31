@@ -36,7 +36,7 @@ export default {
           description:
             "Site Lukas e Gabriell: Um site desenvolvido para artistas, destacando a trajetória e o trabalho da dupla, com informações sobre shows, músicas e videoclipes.",
           tags: ["Vue.js", "API", "MongoDB", "JWT"],
-          /* codeLink: 'https://github.com/seuprojeto2', */
+          codeLink: 'https://lukasegabriell.vercel.app/',
           liveLink: "https://lukasegabriell.vercel.app/",
         },
         {

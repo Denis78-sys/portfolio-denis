@@ -19,7 +19,7 @@ export default {
   max-width: 284px; /* Define um tamanho máximo em telas maiores */
   height: auto; /* Mantém a proporção da imagem */
   border-radius: 50%; /* Deixa a imagem circular */
-  border: 3px solid #D61C1C; /* Adiciona borda */
+  border: 3px solid #e63946; /* Adiciona borda */
   margin: 0 auto; /* Centraliza a imagem */
   display: block; /* Garante alinhamento adequado */
 }

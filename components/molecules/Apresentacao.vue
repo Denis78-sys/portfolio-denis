@@ -75,7 +75,7 @@ export default {
     border-color: transparent;
   }
   50% {
-    border-color: #d61c1c;
+    border-color: #e63946;
   }
 }
 .greeting {
@@ -91,7 +91,7 @@ export default {
 
 .dev {
   font-size: clamp(1rem, 3vw, 1.87rem); /* Texto de descrição responsivo */
-  color: #d61c1c;
+  color: #e63946;
   /* text-align: center; */
 }
 
