@@ -50,8 +50,8 @@
         <ul>
           <li><i class="fas fa-envelope"></i> devdml@gmail.com</li>
           <li><i class="fab fa-whatsapp"></i> +55 (62) 99985-6193</li>
-          <li><i class="fab fa-linkedin"></i> linkedin.com/in/denismarques</li>
-          <li><i class="fab fa-github"></i> github.com/denismarques</li>
+          <li><i class="fab fa-linkedin"></i> linkedin.com/in/denis-marques-771255105</li>
+          <li><i class="fab fa-github"></i> github.com/Denis78-sys</li>
         </ul>
       </div>
     </Container>

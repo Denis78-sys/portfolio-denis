@@ -18,6 +18,7 @@
       <ProjectList id="projetos"/>
       <SkillsSection id="skills"/>
       <Contato id="contato"/>
+      <Footer/>
     </main>
   </div>
 </template>

@@ -48,7 +48,7 @@ section{
   
   padding: 40px 0 40px 0;
   /* border-radius: 10px; */
-  gap: 20px;
+  gap: 40px;
   flex-wrap: wrap;
  /*  width: 100%; */
 }
