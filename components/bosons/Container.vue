@@ -42,7 +42,7 @@
   @media (max-width: 1023px) and (min-width: 768px) {
     .cont {
       max-width: 768px; /* Ajusta largura para tablets */
-      width: calc(100% - 40px); /* Reduz a margem */
+      width: calc(100% - 30px); /* Reduz a margem */
       /* padding: 15px; */ /* Ajusta o espaçamento interno */
     }
   }
@@ -51,7 +51,7 @@
   @media (max-width: 767px) {
     .cont {
       max-width: 100%; /* Ocupa toda a largura disponível */
-      width: calc(100% - 40px); /* Mantém uma margem fixa pequena */
+      width: calc(100% - 30px); /* Mantém uma margem fixa pequena */
       /* padding: 10px; */ /* Reduz o espaçamento interno */
     }
   }

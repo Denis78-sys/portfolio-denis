@@ -1,58 +1,60 @@
 <template>
-  <section class="contato">
-    <div class="formulario">
-      <h2>Entre em Contato</h2>
-      <form @submit.prevent="handleSubmit">
-        <div class="form-group">
-          <label for="nome">Nome</label>
-          <input 
-            type="text" 
-            id="nome" 
-            v-model="form.nome" 
-            placeholder="Digite seu nome" 
-            required 
-          />
-        </div>
+  <section >
+    <Container class="contato">
+      <div class="formulario">
+        <h2>Entre em Contato</h2>
+        <form @submit.prevent="handleSubmit">
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input
+              type="text"
+              id="nome"
+              v-model="form.nome"
+              placeholder="Digite seu nome"
+              required
+            />
+          </div>
 
-        <div class="form-group">
-          <label for="email">E-mail</label>
-          <input 
-            type="email" 
-            id="email" 
-            v-model="form.email" 
-            placeholder="Digite seu e-mail" 
-            required 
-          />
-        </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              v-model="form.email"
+              placeholder="Digite seu e-mail"
+              required
+            />
+          </div>
 
-        <div class="form-group">
-          <label for="mensagem">Mensagem</label>
-          <textarea 
-            id="mensagem" 
-            v-model="form.mensagem" 
-            rows="4" 
-            placeholder="Digite sua mensagem" 
-            required
-          ></textarea>
-        </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea
+              id="mensagem"
+              v-model="form.mensagem"
+              rows="4"
+              placeholder="Digite sua mensagem"
+              required
+            ></textarea>
+          </div>
 
-        <button type="submit" class="botao">Enviar Mensagem</button>
-      </form>
-    </div>
+          <button type="submit" class="botao">Enviar Mensagem</button>
+        </form>
+      </div>
 
-    <div class="informacoes">
-      <h3>Informações de Contato</h3>
-      <p>
-        Estou disponível para freelance. Entre em contato comigo através de qualquer
-        um dos canais abaixo.
-      </p>
-      <ul>
-        <li><i class="fas fa-envelope"></i> devdml@gmail.com</li>
-        <li><i class="fab fa-whatsapp"></i> +55 (62) 99985-6193</li>
-        <li><i class="fab fa-linkedin"></i> linkedin.com/in/denismarques</li>
-        <li><i class="fab fa-github"></i> github.com/denismarques</li>
-      </ul>
-    </div>
+      <div class="informacoes">
+        <h3>Informações de Contato</h3>
+        <p>
+          Estou disponível para freelance. Entre em contato comigo através de
+          qualquer um dos canais abaixo.
+        </p>
+        <ul>
+          <li><i class="fas fa-envelope"></i> devdml@gmail.com</li>
+          <li><i class="fab fa-whatsapp"></i> +55 (62) 99985-6193</li>
+          <li><i class="fab fa-linkedin"></i> linkedin.com/in/denismarques</li>
+          <li><i class="fab fa-github"></i> github.com/denismarques</li>
+        </ul>
+      </div>
+    </Container>
   </section>
 </template>
 
@@ -86,12 +88,15 @@ export default {
 
 <style scoped>
 /* Layout principal */
+/* section{
+  background-color: #1e1e1e;
+} */
 .contato {
   display: flex;
   justify-content: space-between;
   gap: 40px; /* Espaçamento maior entre as colunas */
-  padding: 40px; /* Aumentei o padding para um espaçamento geral */
-  background-color: #1e1e1e;
+  padding: 40px 0 40px 0; /* Aumentei o padding para um espaçamento geral */
+  
   color: #fff;
 }
 
@@ -110,8 +115,8 @@ form {
   flex-direction: column;
   gap: 20px; /* Espaçamento maior entre os grupos de campos */
 }
-p{
-  color: #9CA3AF;
+p {
+  color: #9ca3af;
 }
 .form-group {
   display: flex;

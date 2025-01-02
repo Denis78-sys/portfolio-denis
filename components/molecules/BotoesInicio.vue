@@ -18,6 +18,7 @@ export default {
 <style scoped>
 .botoes {
   display: flex;
+
   width: 100%;
   gap: 16px;
 }
@@ -25,7 +26,7 @@ export default {
   .botoes {
     gap: 8px;
     align-content: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 
@@ -33,7 +34,7 @@ export default {
   .botoes {
     gap: 8px;
     align-content: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 </style>

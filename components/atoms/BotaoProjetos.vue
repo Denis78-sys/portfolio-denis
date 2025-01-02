@@ -1,7 +1,7 @@
 <template>
   <div class="botao-projetos">
     <div>
-      <a class="button" href="">Ver projetos</a>
+      <a class="button" href="#projetos">Ver projetos</a>
     </div>
   </div>
 </template>

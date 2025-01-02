@@ -1,18 +1,21 @@
 <template>
-  <section class="project-list">
-    <h2 class="section-title">Projetos em Destaque</h2>
-    <div class="cards-container">
-      <ProjectCard
-        v-for="(project, index) in projects"
-        :key="index"
-        :image="project.image"
-        :title="project.title"
-        :description="project.description"
-        :tags="project.tags"
-        :codeLink="project.codeLink"
-        :liveLink="project.liveLink"
-      />
-    </div>
+  <section >
+    <Container class="project-list">
+
+      <h2 class="section-title">Projetos em Destaque</h2>
+      <div class="cards-container">
+        <ProjectCard
+          v-for="(project, index) in projects"
+          :key="index"
+          :image="project.image"
+          :title="project.title"
+          :description="project.description"
+          :tags="project.tags"
+          :codeLink="project.codeLink"
+          :liveLink="project.liveLink"
+        />
+      </div>
+    </Container>
   </section>
 </template>
 
@@ -83,8 +86,8 @@ export default {
 
 <style scoped>
 .project-list {
-  padding: 32px;
-  background-color: #2b2b2b;
+  padding: 40px 0 40px 0;
+  /* background-color: #2b2b2b; */
 }
 
 .section-title {

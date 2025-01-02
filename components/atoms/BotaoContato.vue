@@ -1,7 +1,7 @@
 <template>
   <div class="botao-contato">
     <div>
-      <a class="contato" href="">Entre em contato</a>
+      <a class="contato" href="#contato">Entre em contato</a>
     </div>
   </div>
 </template>

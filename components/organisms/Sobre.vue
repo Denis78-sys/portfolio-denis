@@ -1,26 +1,29 @@
 <template>
-  <section class="about-section">
-    <div class="about-content">
-      <h2>Sobre mim</h2>
-      <p>
-        Formado em Análise e Desenvolvimento de Sistemas, desenvolvedor
-        front-end com 2+ anos de experiência. Especializado em criar interfaces
-        modernas, responsivas e otimizadas para performance.
-      </p>
-      <div class="button-wrapper">
-        <ButtonCV> <i class="fas fa-download"></i> Download CV </ButtonCV>
+  <section >
+    <Container class="about-section">
+
+      <div class="about-content">
+        <h2>Sobre mim</h2>
+        <p>
+          Formado em Análise e Desenvolvimento de Sistemas, desenvolvedor
+          front-end com 2+ anos de experiência. Especializado em criar interfaces
+          modernas, responsivas e otimizadas para performance.
+        </p>
+        <div class="button-wrapper">
+          <ButtonCV> <i class="fas fa-download"></i> Download CV </ButtonCV>
+        </div>
       </div>
-    </div>
-    <div class="about-stats">
-      <div class="stat-card">
-        <h3>2+</h3>
-        <p>Anos de experiência</p>
+      <div class="about-stats">
+        <div class="stat-card">
+          <h3>2+</h3>
+          <p>Anos de experiência</p>
+        </div>
+        <div class="stat-card">
+          <h3>8+</h3>
+          <p>Projetos realizados</p>
+        </div>
       </div>
-      <div class="stat-card">
-        <h3>8+</h3>
-        <p>Projetos realizados</p>
-      </div>
-    </div>
+    </Container>
   </section>
 </template>
 
@@ -35,21 +38,24 @@ export default {
 </script>
 
 <style scoped>
+section{
+  background-color: #181818;
+}
 .about-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #181818;
-  padding: 40px;
+  
+  padding: 40px 0 40px 0;
   /* border-radius: 10px; */
   gap: 20px;
   flex-wrap: wrap;
-  width: 100%;
+ /*  width: 100%; */
 }
 
 .about-content {
   flex: 1;
-  min-width: 300px;
+  /* min-width: 300px; */
 }
 
 .about-content h2 {
@@ -75,8 +81,9 @@ export default {
   display: flex;
   gap: 20px;
   flex: 1;
-  min-width: 300px;
-  justify-content: center;
+  /* min-width: 300px; */
+  width: 100%;
+  justify-content: space-between;
 }
 
 .stat-card {
@@ -85,7 +92,7 @@ export default {
   border-radius: 10px;
   text-align: center;
   flex: 1;
-  max-width: 150px;
+ /*  max-width: 150px; */
 }
 
 .stat-card h3 {
@@ -123,8 +130,9 @@ export default {
   }
 
   .stat-card {
+    width: 100%;
     flex: none;
-    width: 140px; /* Ajusta o tamanho dos cards */
+    /* width: 140px; */ /* Ajusta o tamanho dos cards */
   }
 }
 
