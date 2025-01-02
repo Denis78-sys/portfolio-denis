@@ -6,23 +6,18 @@
     </div>
     <main>
       <Container class="cont">
-        <div class="main-apresentacao">
+        <div id="home" class="main-apresentacao">
           <Apresentacao />
-          <!-- <div class="especializacao">
-            <p>
-              Especializado em criar experiências digitais excepcionais com foco em
-              design moderno e performance.
-            </p>
-          </div> -->
+          
           <BotoesInicio />
         </div>
         <ImagemDev />
         <slot />
       </Container>
-
-      <Sobre />
-      <ProjectList />
-      <SkillsSection />
+      <Sobre id="sobre"/>
+      <ProjectList id="projetos"/>
+      <SkillsSection id="skills"/>
+      <Contato id="contato"/>
     </main>
   </div>
 </template>
@@ -33,10 +28,11 @@ export default {
     return {
       menuOpen: false,
       links: [
-        { href: "#", text: "Início", icon: "fas fa-home" },
-        { href: "#", text: "Sobre Mim", icon: "fas fa-user" },
-        { href: "#", text: "O que eu faço", icon: "fas fa-code" },
-        { href: "#", text: "Contato", icon: "fas fa-envelope" },
+        { href: "#home", text: "Início", icon: "fas fa-home" },
+        { href: "#sobre", text: "Sobre Mim", icon: "fas fa-user" },
+        { href: "#projetos", text: "Projetos", icon: "fas fa-code" },
+        { href: "#skills", text: "Habilidades", icon: "fas fa-tasks" },
+        { href: "#contato", text: "Contato", icon: "fas fa-envelope" },
       ],
     };
   },
@@ -203,6 +199,21 @@ p {
   p {
     text-align: center;
     font-size: 0.9rem;
+  }
+  .main-apresentacao {
+    align-items: center;
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
+
+  .main-apresentacao .botoes {
+    width: 100%; /* Garante que o contêiner dos botões ocupe toda a largura */
+    flex-direction: column; /* Empilha os botões verticalmente */
+    gap: 8px; /* Adiciona espaçamento entre os botões */
+  }
+
+  .main-apresentacao .botoes > * {
+    width: 100%; /* Os botões ocupam 100% da largura do contêiner */
   }
 }
 

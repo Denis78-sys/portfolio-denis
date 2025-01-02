@@ -25,13 +25,13 @@
 </template>
 
 <script>
-import ButtonCV from "@/components/atoms/ButtonCV.vue";
+/* import ButtonCV from "@/components/atoms/ButtonCV.vue";
 
 export default {
   components: {
     ButtonCV,
   },
-};
+}; */
 </script>
 
 <style scoped>
@@ -108,13 +108,13 @@ export default {
     gap: 30px;
   }
 
-  .about-content {
+  /* .about-content {
     text-align: center;
-  }
+  } */
 
-  .button-wrapper {
-    justify-content: center; /* Centraliza o botão */
-  }
+  /* .button-wrapper {
+    justify-content: center; 
+  } */
 
   .about-stats {
     flex-wrap: wrap;
