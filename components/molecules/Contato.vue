@@ -9,7 +9,7 @@
             <input
               type="text"
               id="nome"
-              v-model="form.nome"
+              v-model="form.to_name"
               placeholder="Digite seu nome"
               required
             />
@@ -30,7 +30,7 @@
             <label for="mensagem">Mensagem</label>
             <textarea
               id="mensagem"
-              v-model="form.mensagem"
+              v-model="form.message"
               rows="4"
               placeholder="Digite sua mensagem"
               required
@@ -49,7 +49,7 @@
         </p>
         <ul>
           <li><i class="fas fa-envelope"></i> devdml@gmail.com</li>
-          <li><i class="fab fa-whatsapp"></i> +55 (62) 99985-6193</li>
+          <li><i class="fab fa-whatsapp"></i> +55 (62) 9 9985-6193</li>
           <li><i class="fab fa-linkedin"></i> linkedin.com/in/denis-marques-771255105</li>
           <li><i class="fab fa-github"></i> github.com/Denis78-sys</li>
         </ul>
@@ -59,32 +59,55 @@
 </template>
 
 <script>
+import emailjs from "@emailjs/browser";
+
 export default {
   name: "Contato",
   data() {
     return {
       form: {
-        nome: "",
+        to_name: "",
         email: "",
-        mensagem: "",
+        message: "",
       },
     };
   },
   methods: {
     handleSubmit() {
-      if (!this.form.nome || !this.form.email || !this.form.mensagem) {
+      if (!this.form.to_name || !this.form.email || !this.form.message) {
         alert("Por favor, preencha todos os campos!");
         return;
       }
-      console.log("Formulário enviado:", this.form);
-      alert("Mensagem enviada com sucesso!");
-      this.form.nome = "";
-      this.form.email = "";
-      this.form.mensagem = "";
+
+      // Configuração do EmailJS
+      const serviceID = "service_6u1e6nk"; // Substitua pelo seu Service ID
+      const templateID = "template_zgr3blo"; // Substitua pelo seu Template ID
+      const publicKey = "fTBawVWLu98hisrpJ"; // Substitua pela sua Public Key
+
+      const templateParams = {
+        from_name: this.form.to_name, // Alterado de "nome" para "from_name"
+        message: this.form.message, // Alterado de "mensagem" para "message"
+        reply_to: this.form.email, // Novo campo para alinhar com o placeholder {{reply_to}}
+      };
+
+      emailjs
+        .send(serviceID, templateID, templateParams, publicKey)
+        .then(() => {
+          alert("Mensagem enviada com sucesso!");
+          // Limpa os campos do formulário
+          this.form.to_name = "";
+          this.form.email = "";
+          this.form.message = "";
+        })
+        .catch((error) => {
+          console.error("Erro ao enviar mensagem:", error);
+          alert("Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde.");
+        });
     },
   },
 };
 </script>
+
 
 <style scoped>
 /* Layout principal */
