@@ -27,14 +27,11 @@ export default {
 
 <style scoped>
 .side-menu {
- 
- /*  left: -250px; */
   width: 250px;
-  height: 100%;
   background: #121212;
   color: white;
-  /* overflow-y: auto; */
-  /* z-index: 10; */
+  overflow-y: auto;
+  z-index: 10;
 }
 
 ul {
@@ -58,41 +55,35 @@ ul {
 .menu-item a i {
   margin-right: 8px;
 }
-@media (max-width: 1024px){
-  /* .side-menu{
+@media (max-width: 1024px) {
+  .side-menu {
     position: fixed;
-  } */
-  .hede{
+  }
+  .hede {
     display: none;
   }
 }
 /* Responsividade */
 @media (max-width: 768px) {
-  /* .hede{
-    display: none;
-  } */
-  .hede{
+  .hede {
     display: none;
   }
   .side-menu {
-    /* position: fixed; */
-    top: 90px;
+    position: fixed;
     left: -250px;
     width: 250px;
-    height: 100vh;
-    position: sticky;
+    height: 100%;
     background: #121212f3;
     color: white;
     transition: transform 0.3s ease-in-out;
-    z-index: 10;
-    /* overflow-y: auto; */
+    overflow-y: auto;
   }
-
   .side-menu.open {
     transform: translateX(250px);
   }
 
   /* Ajuste a distância entre os itens de menu */
+
   .menu-item a {
     font-size: 0.9rem; /* Reduz um pouco o tamanho da fonte */
   }
@@ -103,12 +94,11 @@ ul {
 }
 
 @media (max-width: 480px) {
-  /* .side-menu {
+  .side-menu {
     position: fixed;
-    
-  } */
+  }
 
-  .hede{
+  .hede {
     display: none;
   }
   .side-menu.open {
@@ -124,5 +114,4 @@ ul {
     margin-right: 5px; /* Espaçamento ainda menor para ícones */
   }
 }
-
 </style>

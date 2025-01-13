@@ -16,7 +16,7 @@
   export default {
     setup() {
       const phoneNumber = "5562999856193"; // Substitua pelo seu número com código do país
-      const message = "Olá! Gostaria de mais informações.";
+      const message = "Olá! Vim através do postfólio, gostaria de encomendar um site.";
       const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
         message
       )}`;

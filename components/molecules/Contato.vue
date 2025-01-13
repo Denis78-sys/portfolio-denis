@@ -44,7 +44,7 @@
       <div class="informacoes">
         <h3>Informações de Contato</h3>
         <p>
-          Estou disponível para freelance. Entre em contato comigo através de
+          Estou disponível para freelance e contrato. Entre em contato comigo através de
           qualquer um dos canais abaixo.
         </p>
         <ul>
@@ -111,9 +111,7 @@ export default {
 
 <style scoped>
 /* Layout principal */
-/* section{
-  background-color: #1e1e1e;
-} */
+
 .contato {
   display: flex;
   justify-content: space-between;

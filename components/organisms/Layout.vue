@@ -54,9 +54,9 @@ export default {
 }
 
 /* Menu lateral */
-.SideMenu {
+/* .SideMenu {
   position: sticky;
-}
+} */
 
 /* Estilo principal */
 main {
@@ -119,13 +119,13 @@ p {
   /* .layout {
     display: block;
   } */
-  .side-menu {
+  /* .side-menu {
     position: fixed;
     height: 100vh;
-    /* top: 0;
-    left: 0; */
+    top: 0;
+    left: 0;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  }
+  } */
   .cont {
     flex-direction: column;
   }

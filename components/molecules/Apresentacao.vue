@@ -81,7 +81,7 @@ export default {
 .greeting {
   font-size: clamp(1rem, 2.5vw, 1.3rem); /* Saudação responsiva */
   color: #9ca3af;
-  /* text-align: center; */
+ 
 }
 
 .wave {
@@ -92,7 +92,7 @@ export default {
 .dev {
   font-size: clamp(1rem, 3vw, 1.87rem); /* Texto de descrição responsivo */
   color: #e63946;
-  /* text-align: center; */
+  
 }
 
 @keyframes wave {

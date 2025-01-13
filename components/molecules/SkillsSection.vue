@@ -34,11 +34,13 @@ export default {
         { name: "HTML & CSS", percentage: 95 },
         { name: "JavaScript", percentage: 90 },
         { name: "Nuxt.js", percentage: 85 },
+        { name: "Tailwind CSS", percentage: 80 },
       ],
       toolsSkills: [
         { name: "Git & GitHub", percentage: 90 },
         { name: "Figma", percentage: 85 },
         { name: "VS Code", percentage: 95 },
+        { name: "IA Generativa", percentage: 85 },
       ],
     };
   },
