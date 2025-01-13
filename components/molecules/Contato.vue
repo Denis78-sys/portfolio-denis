@@ -1,5 +1,5 @@
 <template>
-  <section >
+  <section>
     <Container class="contato">
       <div class="formulario">
         <h2>Entre em Contato</h2>
@@ -37,6 +37,9 @@
             ></textarea>
           </div>
 
+          <!-- reCAPTCHA Widget -->
+         <!--  <div class="g-recaptcha" :data-sitekey="reCaptchaKey"></div> -->
+
           <button type="submit" class="botao">Enviar Mensagem</button>
         </form>
       </div>
@@ -44,13 +47,16 @@
       <div class="informacoes">
         <h3>Informações de Contato</h3>
         <p>
-          Estou disponível para freelance e contrato. Entre em contato comigo através de
-          qualquer um dos canais abaixo.
+          Estou disponível para freelance e contrato. Entre em contato comigo
+          através de qualquer um dos canais abaixo.
         </p>
         <ul>
           <li><i class="fas fa-envelope"></i> devdml@gmail.com</li>
           <li><i class="fab fa-whatsapp"></i> +55 (62) 9 9985-6193</li>
-          <li><i class="fab fa-linkedin"></i> linkedin.com/in/denis-marques-771255105</li>
+          <li>
+            <i class="fab fa-linkedin"></i>
+            linkedin.com/in/denis-marques-771255105
+          </li>
           <li><i class="fab fa-github"></i> github.com/Denis78-sys</li>
         </ul>
       </div>
@@ -70,14 +76,24 @@ export default {
         email: "",
         message: "",
       },
+      /* reCaptchaKey: "6LfcRbYqAAAAAIduUyLLLjHqV82GvIzI2agELh5n", */ // Substitua pelo Site Key obtido no Google reCAPTCHA
     };
   },
   methods: {
-    handleSubmit() {
+    
+    async handleSubmit() {
+      // Verificar se todos os campos estão preenchidos
       if (!this.form.to_name || !this.form.email || !this.form.message) {
         alert("Por favor, preencha todos os campos!");
         return;
       }
+
+      // Verificar se o reCAPTCHA foi concluído
+     /*  const recaptchaResponse = grecaptcha.getResponse();
+      if (!recaptchaResponse) {
+        alert("Por favor, complete o reCAPTCHA!");
+        return;
+      } */
 
       // Configuração do EmailJS
       const serviceID = "service_6u1e6nk"; // Substitua pelo seu Service ID
@@ -85,29 +101,26 @@ export default {
       const publicKey = "fTBawVWLu98hisrpJ"; // Substitua pela sua Public Key
 
       const templateParams = {
-        from_name: this.form.to_name, // Alterado de "nome" para "from_name"
-        message: this.form.message, // Alterado de "mensagem" para "message"
-        reply_to: this.form.email, // Novo campo para alinhar com o placeholder {{reply_to}}
+        from_name: this.form.to_name,
+        message: this.form.message,
+        reply_to: this.form.email,
       };
 
-      emailjs
-        .send(serviceID, templateID, templateParams, publicKey)
-        .then(() => {
-          alert("Mensagem enviada com sucesso!");
-          // Limpa os campos do formulário
-          this.form.to_name = "";
-          this.form.email = "";
-          this.form.message = "";
-        })
-        .catch((error) => {
-          console.error("Erro ao enviar mensagem:", error);
-          alert("Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde.");
-        });
+      try {
+        await emailjs.send(serviceID, templateID, templateParams, publicKey);
+        alert("Mensagem enviada com sucesso!");
+        this.form.to_name = "";
+        this.form.email = "";
+        this.form.message = "";
+       /*  grecaptcha.reset();  */// Reseta o reCAPTCHA
+      } catch (error) {
+        console.error("Erro ao enviar mensagem:", error);
+        alert("Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde.");
+      }
     },
   },
 };
 </script>
-
 
 <style scoped>
 /* Layout principal */
@@ -117,7 +130,7 @@ export default {
   justify-content: space-between;
   gap: 40px; /* Espaçamento maior entre as colunas */
   padding: 40px 0 40px 0; /* Aumentei o padding para um espaçamento geral */
-  
+
   color: #fff;
 }
 
