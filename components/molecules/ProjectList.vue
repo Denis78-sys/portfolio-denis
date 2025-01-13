@@ -87,7 +87,7 @@ export default {
 <style scoped>
 .project-list {
   padding: 40px 0 40px 0;
-  /* background-color: #2b2b2b; */
+ 
 }
 
 .section-title {

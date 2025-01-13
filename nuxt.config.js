@@ -3,7 +3,7 @@ export default {
   head: {
     title: 'Denis Marques - Portfolio',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'pt-br',
     },
     meta: [
       { charset: 'utf-8' },

@@ -4,19 +4,19 @@
         <div class="footer-content">
           <p>© 2025 Denis Marques | Todos os direitos reservados.</p>
           <div class="social-icons">
-            <a href="https://github.com" target="_blank" aria-label="GitHub">
+            <a href="https://github.com/Denis78-sys" target="_blank" aria-label="GitHub">
               <i class="fab fa-github"></i>
             </a>
-            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/denis-marques-771255105" target="_blank" aria-label="LinkedIn">
               <i class="fab fa-linkedin"></i>
             </a>
-            <a
+            <!-- <a
               href="https://instagram.com"
               target="_blank"
               aria-label="Instagram"
             >
               <i class="fab fa-instagram"></i>
-            </a>
+            </a> -->
           </div>
         </div>
       </Container>
