@@ -1,6 +1,5 @@
 export default {
-  /* target: 'static', */
-  buildDir: 'dist', // Define o diretório de saída como 'dist'
+  ssr: true, // Habilita Server Side Rendering
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Denis Marques - Portfolio',
