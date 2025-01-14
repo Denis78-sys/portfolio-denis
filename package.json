@@ -13,7 +13,6 @@
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@nuxtjs/axios": "^5.13.6",
     "core-js": "^3.39.0",
-    "esm": "^3.2.25",
     "nuxt": "^2.15.8",
     "vue": "^2.7.10",
     "vue-server-renderer": "^2.7.10",
@@ -24,5 +23,9 @@
     "@nuxt/babel-preset-app": "^2.18.1",
     "sass": "^1.32.13",
     "sass-loader": "^10.1.1"
-  }
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "type": "module"
 }
