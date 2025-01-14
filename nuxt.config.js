@@ -1,5 +1,8 @@
 export default {
   target: 'static',
+  generate: {
+    dir: 'dist' // Se necessário, ajuste o nome do diretório aqui
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Denis Marques - Portfolio',
