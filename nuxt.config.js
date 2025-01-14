@@ -63,8 +63,9 @@ export default {
     },
     transpile: ['@emailjs/browser'], // Configuração para transpilar pacotes externos
   },
-
+/* 
    server: {
     host: '0.0.0.0', // Configuração comentada para servidores
-  },
+  }, */
+  
 };
