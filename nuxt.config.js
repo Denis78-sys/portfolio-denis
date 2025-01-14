@@ -1,5 +1,5 @@
 export default {
-  target: 'static',
+  /* target: 'static', */
   buildDir: 'dist', // Define o diretório de saída como 'dist'
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
