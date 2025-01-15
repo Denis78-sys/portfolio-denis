@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
+    "build": "nuxt generate",
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
@@ -25,7 +25,7 @@
     "sass-loader": "^10.1.1"
   },
   "engines": {
-    "node": "22.x"
+    "node": "20.x"
   },
    "type": "commonjs"
 }
