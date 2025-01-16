@@ -61,6 +61,8 @@ h1 {
 /* Responsividade */
 @media (max-width: 768px) {
   .header {
+    z-index: 10;
+    position:fixed;
     width: 100%;
   }
   .hamburger {

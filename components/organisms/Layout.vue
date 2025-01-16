@@ -150,6 +150,7 @@ p {
   }
 
   main {
+    margin-top: 100px;
     overflow-y: auto; /* Permite scroll no conteúdo principal */
     flex: 1; /* Garante que o main ocupa o espaço restante */
   }
